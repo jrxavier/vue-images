@@ -1,10 +1,17 @@
 <template>
-  <h3>Aplicacao Vue</h3>
-</template>
+  <div>
+    <AppHeader></AppHeader>
+  </div>
+  </template>
 
 
 <script>
+import AppHeader from './components/AppHeader';
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    AppHeader
+  }
 }
 </script>
