@@ -5,7 +5,11 @@
     </a>
     {{ isLoggedIn }}
     <div class="right menu">
-      <a href="#" class="ui item" @click="login">
+      <div v-if="isLoggedIn">
+        Galeria de butoes
+        Upload
+      </div>
+      <a v-else href="#" class="ui item" @click="login">
         Login
       </a>
     </div>
