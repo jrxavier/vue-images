@@ -3,11 +3,11 @@
     <a href="/" class="item">
       Image Storage
     </a>
-    {{ isLoggedIn }}
     <div class="right menu">
-      <div v-if="isLoggedIn">
-        Galeria de butoes
-        Upload
+      <div v-if="isLoggedIn" class="horizontal">
+        <a class="item">Gallery</a>
+        <a class="item">Upload</a>
+        <a class="item" @click="logout">Logout</a>
       </div>
       <a v-else href="#" class="ui item" @click="login">
         Login
@@ -22,6 +22,16 @@ import { mapActions, mapGetters } from 'vuex';
 export default {
   name: 'AppHeader',
   computed: mapGetters(['isLoggedIn']),
-  methods: mapActions(['login'])
+  methods: mapActions(['login', 'logout'])
 }
 </script>
+
+<style scoped>
+.horizontal {
+  display: flex;
+  flex-direction: row;
+}
+</style>
+>
+
+</style>
